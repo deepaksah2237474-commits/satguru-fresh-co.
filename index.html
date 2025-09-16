@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Satguru Fresh Co. — Since 1999</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Satguru Fresh Co. — Fresh groceries in Jhansi since 1999. Order on WhatsApp." />
+  <style>
+    :root{
+      --dark:#1A4D2E; --fresh:#3CB371; --bg:#FAF8F4; --card:#ffffff; --muted:#6b6b6b;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Roboto,system-ui,Arial;margin:0;background:var(--bg);color:#222}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(250,248,244,0.95));position:sticky;top:0;z-index:20}
+    .logo-row{display:flex;align-items:center;gap:12px}
+    .logo{height:56px}
+    nav a{margin-left:18px;color:var(--dark);text-decoration:none;font-weight:600}
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px;border-radius:18px;max-width:1200px;margin:18px auto;background:linear-gradient(180deg,#ffffff,#fbfbfb);box-shadow:0 24px 50px rgba(0,0,0,0.08)}
+    .hero .title{font-size:34px;color:var(--dark);margin:0 0 8px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .cta{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--fresh);color:white;text-decoration:none;font-weight:700;box-shadow:0 10px 28px rgba(60,179,113,0.18)}
+    .hero-card{background:linear-gradient(135deg,rgba(255,255,255,0.7),rgba(245,244,240,0.7));border-radius:14px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:12px;transform-style:preserve-3d}
+    .hero-card img{width:100%;height:300px;object-fit:cover;border-radius:10px;box-shadow:0 18px 38px rgba(0,0,0,0.12)}
+
+    /* Highlights */
+    .highlights{display:flex;gap:12px;margin-top:18px}
+    .hl{flex:1;background:var(--card);padding:14px;border-radius:12px;text-align:center;box-shadow:0 12px 28px rgba(0,0,0,0.06)}
+
+    /* Products */
+    .products{margin-top:28px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:linear-gradient(180deg,#fff,#faf9f7);padding:12px;border-radius:12px;box-shadow:0 16px 32px rgba(0,0,0,0.06);overflow:hidden;transition:transform .28s,box-shadow .28s}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .card h4{margin:10px 0 6px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .card:hover{transform:translateY(-10px) rotateX(2deg);box-shadow:0 30px 60px rgba(0,0,0,0.12)}
+
+    /* About */
+    .about{display:flex;gap:18px;align-items:center;margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fcfbfa);box-shadow:0 16px 36px rgba(0,0,0,0.04)}
+    .timeline{flex:1}
+    .about img{width:320px;border-radius:10px;object-fit:cover}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr 380px;gap:18px;margin-top:28px}
+    .map{border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,0.08)}
+    .contact-info{background:var(--card);padding:18px;border-radius:12px}
+    .qr{width:180px;height:180px}
+
+    footer{margin:40px 0 80px;text-align:center;color:var(--muted)}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr}
+      nav a{display:none}
+      .logo{height:48px}
+    }
+    @media(max-width:520px){
+      .grid{grid-template-columns:1fr}
+      .hero-card img{height:200px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-row">
+      <img class="logo" src="https://breakable-yellow-brpeufh6db.edgeone.app/Screenshot%202025-09-14%20132803.png" alt="Satguru Fresh Co. logo">
+      <div style="font-weight:700;color:var(--dark)">Satguru Fresh Co.</div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <h1 class="title">Satguru Fresh Co.</h1>
+        </div>
+        <p>Since 1999 | Freshness Delivered Fast — Trusted by families in Siddheshwar Nagar, Jhansi.</p>
+        <a class="cta" href="https://wa.link/rjrkh1" target="_blank">Order Now on WhatsApp</a>
+
+        <div class="highlights">
+          <div class="hl">🥦 Fresh Groceries Daily</div>
+          <div class="hl">🚚 Fast Local Delivery</div>
+          <div class="hl">🏪 Since 1999 — Trusted</div>
+        </div>
+
+        <div class="products" id="products">
+          <h3 style="margin-top:20px">Our Categories</h3>
+          <div class="grid">
+            <div class="card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=800&auto=format&fit=crop" alt="Chawal">
+              <h4>Chawal (Rice)</h4>
+              <p>Premium & local varieties. Bulk packs available.</p>
+            </div>
+            <div class="card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1582719478189-7f9980e8f4b5?q=80&w=800&auto=format&fit=crop" alt="Daal">
+              <h4>Daal (Pulses)</h4>
+              <p>Fresh pulses, properly cleaned and packed.</p>
+            </div>
+            <div class="card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1585238342029-6e8bb0e6f3f1?q=80&w=800&auto=format&fit=crop" alt="Oil">
+              <h4>Oil</h4>
+              <p>Refined & cold-pressed options available.</p>
+            </div>
+            <div class="card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1505577058444-a3dab1ecf30f?q=80&w=800&auto=format&fit=crop" alt="Snacks">
+              <h4>Snacks & Beverages</h4>
+              <p>Popular brands, fresh stock.</p>
+            </div>
+            <div class="card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1582027976036-8d9b0d6d4b7a?q=80&w=800&auto=format&fit=crop" alt="Household">
+              <h4>Household & Cleaning</h4>
+              <p>Soaps, detergents, and everyday essentials.</p>
+            </div>
+            <div class="card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?q=80&w=800&auto=format&fit=crop" alt="More">
+              <h4>More</h4>
+              <p>Seasonal items and special offers.</p>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:14px">
+            <a class="cta" href="#" onclick="window.open('https://docs.google.com/spreadsheets/', '_blank')">Download Full Price List</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card" data-tilt>
+        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=1200&auto=format&fit=crop" alt="Fresh groceries basket">
+        <div style="text-align:center">
+          <small style="color:var(--muted)">Tap to tilt / hover for 3D effect</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="timeline">
+        <h3>Our Journey</h3>
+        <p style="color:var(--muted)">Started in 1999 as <strong>Sathguru Kirana Store</strong>. Today we are <strong>Satguru Fresh Co.</strong> — serving fresh groceries and trusted service to families across Jhansi.</p>
+        <ul style="color:var(--muted)">
+          <li><strong>1999</strong> — Store opened in Siddheshwar Nagar.</li>
+          <li><strong>2025</strong> — Rebranded to Satguru Fresh Co. and expanded delivery services.</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1200&auto=format&fit=crop" alt="Shop photo">
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="contact-info">
+        <h3>Order & Contact</h3>
+        <p style="color:var(--muted)">Phone: <strong>+91 00000 00000</strong> (replace with your number)</p>
+        <p style="color:var(--muted)">Address: Siddheshwar Nagar, Jhansi</p>
+        <p style="color:var(--muted)">WhatsApp Orders:</p>
+        <a class="cta" href="https://wa.link/rjrkh1" target="_blank">Order on WhatsApp</a>
+        <div style="margin-top:12px;display:flex;align-items:center;gap:12px">
+          <div>
+            <img class="qr" src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=https://wa.link/rjrkh1" alt="QR code">
+            <div style="font-size:13px;color:var(--muted);text-align:center;margin-top:6px">Scan to order</div>
+          </div>
+          <div style="font-size:14px;color:var(--muted)">
+            <strong>Satguru Fresh Co.</strong><br>
+            Siddheshwar Nagar, Jhansi<br>
+            Open since 1999
+          </div>
+        </div>
+      </div>
+
+      <div class="map">
+        <!-- Google Maps embed for Jhansi (replace coords/address if you want exact pin) -->
+        <iframe src="https://www.google.com/maps?q=Jhansi&output=embed" width="100%" height="100%" style="min-height:320px;border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <footer>
+      © Satguru Fresh Co. — Since 1999. Built with ❤️. 
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script>
+    // Initialize tilt for all elements with data-tilt
+    if(window.VanillaTilt){
+      VanillaTilt.init(document.querySelectorAll('[data-tilt]'),{
+        max:12, speed:350, glare:true, "max-glare":0.18
+      });
+    }
+  </script>
+</body>
+</html>
