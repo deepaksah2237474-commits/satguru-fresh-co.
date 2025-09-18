@@ -212,7 +212,7 @@ we deliver happiness, health, and trust in every bag.
       list.forEach(p=>{
         const card = document.createElement('div'); card.className='card'; card.setAttribute('data-tilt','');
         card.innerHTML = `
-          <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300x200?text=Image'">
+          <img src="${p.img}" alt="${p.name}" onerror="this.src='https://source.unsplash.com/300x200/?grocery'" >
           <h3>${p.name}</h3>
           <div class="meta">Category: ${p.category}</div>
           <div class="price">${p.price}</div>
