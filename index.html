@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Satguru Fresh Co. </title>
+  <title>Satguru Fresh Co.</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -16,62 +16,271 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
 
   <style>
-    :root{--bg1:#062a1f;--bg2:#0b7a42;--accent:#00ffd5;--glass: rgba(255,255,255,0.08);--glass-strong: rgba(255,255,255,0.12);--card-radius:20px;--max-width:1200px;--ff-head: 'Poppins', sans-serif;--ff-body: 'Roboto', sans-serif}
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:var(--ff-body);color:#fff;background:linear-gradient(120deg,var(--bg1),var(--bg2));-webkit-font-smoothing:antialiased}
-    .wrap{max-width:var(--max-width);margin:0 auto;padding:30px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:58px;height:58px;border-radius:12px;background:linear-gradient(135deg,#00ffd5, #00a86b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#012;box-shadow:0 8px 30px rgba(0,0,0,0.4)}
-    .brand h1{font-family:var(--ff-head);font-size:18px;margin:0}
-    nav a{margin-left:18px;color:rgba(255,255,255,0.9);font-weight:500}
+    :root {
+      --bg1: #062a1f;
+      --bg2: #0b7a42;
+      --accent: #00ffd5;
+      --glass: rgba(255,255,255,0.08);
+      --glass-strong: rgba(255,255,255,0.12);
+      --card-radius: 20px;
+      --max-width: 1200px;
+      --ff-head: 'Poppins', sans-serif;
+      --ff-body: 'Roboto', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: var(--ff-body);
+      color: #fff;
+      background: linear-gradient(120deg, var(--bg1), var(--bg2));
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 30px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #00ffd5, #00a86b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #012;
+      box-shadow: 0 8px 30px rgba(0,255,213,0.15);
+    }
+    .brand h1 {
+      font-family: var(--ff-head);
+      font-size: 18px;
+      margin: 0;
+    }
+    nav a {
+      margin-left: 18px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
 
     /* HERO */
-    .hero{display:grid;grid-template-columns:1fr 520px;gap:30px;align-items:center;padding:40px 0}
-    .hero-left{padding-right:10px}
-    .kicker{display:inline-block;background:rgba(0,0,0,0.2);padding:6px 12px;border-radius:999px;font-size:13px;margin-bottom:16px}
-    .hero h2{font-family:var(--ff-head);font-size:44px;line-height:1.02;margin:0 0 18px}
-    .hero p{font-size:16px;color:rgba(255,255,255,0.9);margin-bottom:20px}
-    .cta-row{display:flex;gap:14px;align-items:center}
-    .btn{padding:14px 24px;border-radius:50px;border:none;cursor:pointer;font-weight:600}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),#05b36b);box-shadow:0 8px 30px rgba(0,255,213,0.12);color:#012}
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff}
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 520px;
+      gap: 30px;
+      align-items: center;
+      padding: 40px 0;
+    }
+    .hero-left {
+      padding-right: 10px;
+    }
+    .kicker {
+      display: inline-block;
+      background: rgba(0,0,0,0.2);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+    .hero h2 {
+      font-family: var(--ff-head);
+      font-size: 44px;
+      line-height: 1.02;
+      margin: 0 0 18px;
+    }
+    .hero p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .btn {
+      padding: 14px 24px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-family: var(--ff-body);
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, var(--accent), #05b36b);
+      box-shadow: 0 8px 30px rgba(0,255,213,0.12);
+      color: #012;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #05b36b, var(--accent));
+      color: #012;
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+    }
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
     /* 3D area */
-    .scene-wrap{position:relative;width:100%;height:520px;border-radius:28px;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,0.06),rgba(255,255,255,0.02));backdrop-filter:blur(6px);box-shadow:0 30px 80px rgba(0,0,0,0.45)}
-    .scene-iframe{width:100%;height:100%;border:0}
+    .scene-wrap {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02));
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 30px rgba(0,255,213,0.08);
+    }
+    .scene-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 0;
+      background: #222;
+    }
+    .floating-cta {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      background: var(--glass-strong);
+      padding: 10px 16px;
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      box-shadow: 0 4px 24px rgba(0,255,213,0.09);
+    }
 
     /* Products area */
-    .products-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .categories{display:flex;gap:10px;flex-wrap:wrap}
-    .cat-btn{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px 14px;border-radius:999px;cursor:pointer}
-    .cat-btn.active{background:rgba(0,0,0,0.14);border-color:rgba(255,255,255,0.12)}
+    .products-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+    .categories {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .cat-btn {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      color: #fff;
+      font-family: var(--ff-body);
+    }
+    .cat-btn.active {
+      background: rgba(0,0,0,0.14);
+      border-color: rgba(255,255,255,0.12);
+      color: var(--accent);
+    }
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-    .card{background:var(--glass);border-radius:var(--card-radius);padding:18px;text-align:center;transition:transform .35s ease,box-shadow .35s ease;box-shadow:0 8px 30px rgba(0,0,0,0.35)}
-    .card img{width:120px;height:100px;object-fit:cover;margin-bottom:12px;border-radius:12px}
-    .card h3{margin:6px 0 8px;font-family:var(--ff-head);font-size:18px}
-    .meta{font-size:13px;color:rgba(255,255,255,0.85)}
-    .price{margin-top:12px;font-weight:700}
-    .card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 30px 80px rgba(0,255,213,0.12)}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: var(--glass);
+      border-radius: var(--card-radius);
+      padding: 18px;
+      text-align: center;
+      transition: transform .35s ease, box-shadow .35s ease;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    }
+    .card img {
+      width: 120px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      background: #222;
+    }
+    .card h3 {
+      margin: 6px 0 8px;
+      font-family: var(--ff-head);
+      font-size: 18px;
+    }
+    .meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+    }
+    .price {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 30px 80px rgba(0,255,213,0.12);
+    }
 
     /* About & Contact */
-    .about{padding:60px 0;color:rgba(255,255,255,0.95)}
-    .contact{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
-    .contact .box{background:var(--glass);padding:16px;border-radius:12px}
+    .about {
+      padding: 60px 0;
+      color: rgba(255,255,255,0.95);
+    }
+    .contact {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .contact .box {
+      background: var(--glass);
+      padding: 16px;
+      border-radius: 12px;
+    }
 
-    footer{padding:40px 0;text-align:center;color:rgba(255,255,255,0.8)}
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+    }
 
-    @media (max-width:1000px){.hero{grid-template-columns:1fr}.scene-wrap{height:420px}}@media (max-width:560px){.hero h2{font-size:28px}}
+    @media (max-width:1000px) {
+      .hero { grid-template-columns: 1fr; }
+      .scene-wrap { height: 420px; }
+    }
+    @media (max-width:560px) {
+      .hero h2 { font-size: 28px; }
+      .scene-wrap { height: 260px; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand">
-<div class="logo">
-  <img src="https://wilful-indigo-ksovw32ago.edgeone.app/Screenshot%202025-09-14%20132803.png" alt="Sathguru Fresh Co. Logo" style="height:60px;">
-</div>
+        <div class="logo">
+          <img src="https://wilful-indigo-ksovw32ago.edgeone.app/Screenshot%202025-09-14%20132803.png" alt="Sathguru Fresh Co. Logo" style="height:60px;">
+        </div>
         <div>
           <h1>Satguru Fresh Co.</h1>
           <div style="font-size:12px;color:rgba(255,255,255,0.7)">Grocery • Jhansi</div>
@@ -97,8 +306,9 @@
       </div>
 
       <div class="scene-wrap">
-        <iframe class="scene-iframe" src="https://drive.google.com/file/d/1LBDvog95fEc-ClK8ae4MZeLBu4oOypIS/preview" title="Satguru 3D Scene" loading="lazy"></iframe>
-        <div class="floating-cta" aria-hidden="true" style="position:absolute;left:24px;bottom:24px;background:var(--glass-strong);padding:10px 16px;border-radius:12px;backdrop-filter:blur(8px);display:flex;gap:12px;align-items:center">
+        <!-- Replace iframe with static image as Google Drive iframe is blocked by CSP -->
+        <img class="scene-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Satguru 3D Experience" />
+        <div class="floating-cta" aria-hidden="true">
           <div style="width:10px;height:10px;background:var(--accent);border-radius:50%"></div>
           <div>
             <div style="font-weight:700">1-hour delivery</div>
@@ -114,7 +324,6 @@
         <h2 style="margin:0">Products</h2>
         <div class="categories" id="categories"></div>
       </div>
-
       <div class="grid" id="productsGrid"></div>
     </section>
 
@@ -122,23 +331,17 @@
     <section id="about" class="about">
       <h2>About Satguru Fresh Co.</h2>
       <p>
-      Since 1999, Sathguru Fresh Co. has been the heartbeat of Siddheshwar Nagar, Jhansi — delivering freshness, trust, and quality right to your doorstep.
-
-What started as a humble kirana store has now grown into a modern grocery brand loved by thousands of families. From premium rice, dals, and dairy to everyday essentials like oil, sugar, tea, and bakery products, we make sure your home never runs out of freshness.
-
-🚀 Why Choose Us?
-
-◦ 🥗 Freshness Guaranteed – Every product handpicked with care.
-
-◦ ⏱️ Superfast Delivery – Groceries at your door in just 1 hour.
-
-◦ 💰 Best Prices Everyday – Affordable rates with premium quality.
-
-◦ 🤝 25+ Years of Trust – Serving Jhansi families since 1999.
-
-At Sathguru Fresh Co., we don’t just sell groceries —
-we deliver happiness, health, and trust in every bag.
-      
+        Since 1999, Sathguru Fresh Co. has been the heartbeat of Siddheshwar Nagar, Jhansi — delivering freshness, trust, and quality right to your doorstep.
+        <br>
+        What started as a humble kirana store has now grown into a modern grocery brand loved by thousands of families. From premium rice, dals, and dairy to everyday essentials like oil, sugar, tea, and bakery —
+        <br><br>
+        🚀 <strong>Why Choose Us?</strong><br>
+        ◦ 🥗 Freshness Guaranteed – Every product handpicked with care.<br>
+        ◦ ⏱️ Superfast Delivery – Groceries at your door in just 1 hour.<br>
+        ◦ 💰 Best Prices Everyday – Affordable rates with premium quality.<br>
+        ◦ 🤝 25+ Years of Trust – Serving Jhansi families since 1999.<br>
+        <br>
+        At Sathguru Fresh Co., we don’t just sell groceries — we deliver happiness, health, and trust in every bag.
       </p>
       <ul>
         <li>Fresh fruits & vegetables</li>
@@ -200,17 +403,25 @@ we deliver happiness, health, and trust in every bag.
     const categories = ['All', ...Array.from(new Set(productsData.map(p=>p.category)))];
     const categoriesContainer = document.getElementById('categories');
     categories.forEach((c,i)=>{
-      const btn = document.createElement('button'); btn.className='cat-btn'+(i===0?' active':''); btn.innerText=c;
-      btn.addEventListener('click', ()=>{document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('active'));btn.classList.add('active'); renderProducts(c)});
+      const btn = document.createElement('button'); 
+      btn.className = 'cat-btn' + (i === 0 ? ' active' : ''); 
+      btn.innerText = c;
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts(c);
+      });
       categoriesContainer.appendChild(btn);
     });
 
     const productsGrid = document.getElementById('productsGrid');
     function renderProducts(filter){
-      productsGrid.innerHTML='';
-      const list = filter==='All' ? productsData : productsData.filter(p=>p.category===filter);
+      productsGrid.innerHTML = '';
+      const list = filter === 'All' ? productsData : productsData.filter(p=>p.category === filter);
       list.forEach(p=>{
-        const card = document.createElement('div'); card.className='card'; card.setAttribute('data-tilt','');
+        const card = document.createElement('div'); 
+        card.className = 'card'; 
+        card.setAttribute('data-tilt','');
         card.innerHTML = `
           <img src="${p.img}" alt="${p.name}" onerror="this.src='https://source.unsplash.com/300x200/?grocery'" >
           <h3>${p.name}</h3>
@@ -227,34 +438,55 @@ we deliver happiness, health, and trust in every bag.
     renderProducts('All');
 
     // GSAP animations
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from('.logo', {opacity:0,y:-20,duration:0.8});
-    gsap.from('.kicker', {opacity:0,y:10,duration:0.6,delay:0.2});
-    gsap.from('.hero h2', {opacity:0,x:-30,duration:0.9,delay:0.3});
-    gsap.from('.hero p', {opacity:0,x:-10,duration:0.9,delay:0.45});
-    gsap.from('.btn', {opacity:0,y:10,duration:0.6,stagger:0.08,delay:0.6});
+    if (window.gsap && window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from('.logo', {opacity:0,y:-20,duration:0.8});
+      gsap.from('.kicker', {opacity:0,y:10,duration:0.6,delay:0.2});
+      gsap.from('.hero h2', {opacity:0,x:-30,duration:0.9,delay:0.3});
+      gsap.from('.hero p', {opacity:0,x:-10,duration:0.9,delay:0.45});
+      gsap.from('.btn', {opacity:0,y:10,duration:0.6,stagger:0.08,delay:0.6});
 
-    gsap.utils.toArray('.card').forEach((el,i)=>{gsap.from(el,{opacity:0,y:30,duration:0.8,delay:0.15*i,scrollTrigger:{trigger:el,start:'top 85%'}})});
+      gsap.utils.toArray('.card').forEach((el,i)=>{
+        gsap.from(el,{
+          opacity:0,
+          y:30,
+          duration:0.8,
+          delay:0.15*i,
+          scrollTrigger:{
+            trigger:el,
+            start:'top 85%'
+          }
+        })
+      });
+    }
 
     // Buttons
-    document.getElementById('learnMore').addEventListener('click', ()=>{window.scrollTo({top:document.querySelector('#about').offsetTop-30,behavior:'smooth'});});
-    document.getElementById('orderNow').addEventListener('click', ()=>{window.scrollTo({top:document.querySelector('#products').offsetTop-30,behavior:'smooth'});});
+    document.getElementById('learnMore').addEventListener('click', ()=>{
+      window.scrollTo({top:document.querySelector('#about').offsetTop-30,behavior:'smooth'});
+    });
+    document.getElementById('orderNow').addEventListener('click', ()=>{
+      window.scrollTo({top:document.querySelector('#products').offsetTop-30,behavior:'smooth'});
+    });
 
-    // WhatsApp button - replace number with your full number (country code +91...)
+    // WhatsApp button - use full number with country code
     document.getElementById('whatsappBtn').addEventListener('click', ()=>{
-      const phone = '6307948464'; // <-- replace with your number (e.g. 919812345678)
+      const phone = '916307948464'; // +91 country code for India
       const text = encodeURIComponent('Hello Satguru Fresh Co., I want to place an order.');
       window.open(`https://wa.me/${phone}?text=${text}`,'_blank');
     });
 
     // Respect reduced motion
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){gsap.globalTimeline.timeScale(0.4);}
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      if (window.gsap && window.gsap.globalTimeline) {
+        gsap.globalTimeline.timeScale(0.4);
+      }
+    }
   </script>
 
   <!-- README NOTES (keep for your repo) -->
   <!--
-    - Replace Spline iframe src with your own Spline scene URL.
-    - Replace phone number in JS (whatsappBtn click) with your real number.
+    - Replace the scene-img src with your own 3D scene image or a service that allows public embedding.
+    - Replace phone number in JS (whatsappBtn click) with your real number (country code +91...).
     - If you have real product images, replace the src in productsData array with your uploaded image URLs.
     - To add/remove products, edit the productsData array.
   -->
