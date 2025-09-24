@@ -425,36 +425,35 @@
     });
 
     const productsGrid = document.getElementById('productsGrid');
-    function renderProducts(filter){
-      productsGrid.innerHTML = '';
-      const list = filter === 'All' ? productsData : productsData.filter(p=>p.category === filter);
-      list.forEach(p=>{
-        const card = document.createElement('div'); 
-        card.className = 'card'; 
-        card.setAttribute('data-tilt','');
-       card.innerHTML = `
-  <img src="${p.img}" alt="${p.name}" onerror="this.src='https://source.unsplash.com/300x200/?grocery'" >
-  <h3>${p.name}</h3>
-  <div class="meta">Category: ${p.category}</div>
-  <div class="price">${p.price}</div>
-  <button class="btn btn-primary order-btn" data-product="${p.name}">Order</button>
-`;
-        
-        productsGrid.appendChild(card);
-      });
-      // Re-init tilt on new elements
-      if(window.VanillaTilt) VanillaTilt.init(document.querySelectorAll('[data-tilt]'),{max:12,speed:400,glare:true,'max-glare':0.18});
-    }
-
-
-    document.querySelectorAll('.order-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const phone = '916307948464';
-    const product = this.getAttribute('data-product');
-    const text = encodeURIComponent(`Hello Satguru Fresh Co., I want to order: ${product}`);
-    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+   function renderProducts(filter){
+  productsGrid.innerHTML = '';
+  const list = filter === 'All' ? productsData : productsData.filter(p=>p.category === filter);
+  list.forEach(p=>{
+    const card = document.createElement('div'); 
+    card.className = 'card'; 
+    card.setAttribute('data-tilt','');
+    card.innerHTML = `
+      <img src="${p.img}" alt="${p.name}" onerror="this.src='https://source.unsplash.com/300x200/?grocery'" >
+      <h3>${p.name}</h3>
+      <div class="meta">Category: ${p.category}</div>
+      <div class="price">${p.price}</div>
+      <button class="btn btn-primary order-btn" data-product="${p.name}">Order</button>
+    `;
+    productsGrid.appendChild(card);
   });
-});
+  // Re-init tilt on new elements
+  if(window.VanillaTilt) VanillaTilt.init(document.querySelectorAll('[data-tilt]'),{max:12,speed:400,glare:true,'max-glare':0.18});
+
+  // Add order button functionality
+  document.querySelectorAll('.order-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const phone = '916307948464';
+      const product = this.getAttribute('data-product');
+      const text = encodeURIComponent(`Hello Satguru Fresh Co., I want to order: ${product}`);
+      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+    });
+  });
+}
     // Initial render
     renderProducts('All');
 
