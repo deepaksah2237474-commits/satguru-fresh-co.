@@ -301,6 +301,32 @@
   margin-right: 12px;
   font-size: 1.5em;
 }
+    .whatsapp-float {
+  position: fixed;
+  width: 62px;
+  height: 62px;
+  bottom: 32px;
+  right: 32px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.25);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.whatsapp-float img {
+  width: 38px;
+  height: 38px;
+}
+.whatsapp-float:hover {
+  box-shadow: 0 10px 32px rgba(37,211,102,0.45);
+  transform: scale(1.08);
+  background: #1ebe5d;
+}
 
     
   </style>
@@ -542,6 +568,14 @@
     }
   </script>
 
+
+  <a href="https://wa.me/916307948464?text=Hello%20Satguru%20Fresh%20Co.,%20I%20want%20to%20order%20groceries." 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       alt="WhatsApp Chat" />
+</a>
   <!-- README NOTES (keep for your repo) -->
   <!--
     - Replace the scene-img src with your own 3D scene image or a service that allows public embedding.
